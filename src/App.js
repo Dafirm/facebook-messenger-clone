@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useEffect, useState } from "react";
-import { FormControl, InputLabel, Input } from "@material-ui/core";
+import { FormControl,  Input } from "@material-ui/core";
 import Message from "./Message";
 import db from "./firebase";
 import firebase from "firebase/compat/app";
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100" />
+      <img src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100" alt="M"/>
       <h1>Hello Dafirm </h1>
       <h2>Welcome {username}</h2>
 
