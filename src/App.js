@@ -15,6 +15,11 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
+    setUsername(window.prompt("Please enter your name"));
+  }, []);
+
+
+  useEffect(() => {
     db.collection("messages")
       .orderBy("timestamp", "desc")
       .onSnapshot(snapshot => {
@@ -22,10 +27,7 @@ function App() {
       });
   }, [])
 
-  useEffect(() => {
-    setUsername(prompt("Please enter your name"));
-  }, [])
-
+ 
   const sendMessage = (event) => {
     event.preventDefault();
 
