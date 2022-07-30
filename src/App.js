@@ -5,7 +5,7 @@ import { FormControl,  Input } from "@material-ui/core";
 import Message from "./Message";
 import db from "./firebase";
 import firebase from "firebase/compat/app";
-import FlipMove from 'react-flip-move';
+//import FlipMove from 'react-flip-move';
 import SendIcon from '@mui/icons-material/Send';
 import { IconButton } from '@mui/material';
 
@@ -15,7 +15,7 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    setUsername(window.prompt("Please enter your name"));
+    setUsername(prompt("Please enter your name"));
   }, []);
 
 
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <img src="https://facebookbrand.com/wp-content/uploads/2018/09/Header-e1538151782912.png?w=100&h=100" alt="M"/>
-      <h1>Hello Dafirm </h1>
+      <h1>Dafirm Messenger </h1>
       <h2>Welcome {username}</h2>
 
       <form className="app__form">
@@ -59,12 +59,12 @@ function App() {
         </FormControl>
       </form>
 
-      <FlipMove>
+      
         {
         messages.map(({id, message}) => (
           <Message key={id} username={username} message={message} />
         ))}
-      </FlipMove>
+      
     </div>
   );
 }
